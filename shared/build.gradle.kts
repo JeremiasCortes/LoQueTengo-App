@@ -51,15 +51,38 @@ kotlin {
            instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
        }
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.compose.uiTooling)
 
-            // Client Ktor OkHttp
+            // Motor HTTP para Android
             implementation(libs.ktor.client.okhttp)
         }
+
+        jvmMain.dependencies {
+            // Motor HTTP para Desktop/JVM
+            implementation(libs.ktor.client.okhttp)
+        }
+
+        iosMain.dependencies {
+            // Motor nativo basado en NSURLSession para iOS
+            implementation(libs.ktor.client.darwin)
+        }
+
+        jsMain.dependencies {
+            implementation(libs.wrappers.browser)
+
+            // Motor basado en Fetch API para JavaScript
+            implementation(libs.ktor.client.js)
+        }
+
+        wasmJsMain.dependencies {
+            // Motor compatible con WebAssembly
+            implementation(libs.ktor.client.cio)
+        }
+
         commonMain.dependencies {
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
@@ -70,16 +93,14 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
-            // Client Ktor Core
+            // Configuración compartida de Ktor
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
         }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
-        }
-        jsMain.dependencies {
-            implementation(libs.wrappers.browser)
         }
     }
 }
