@@ -13,7 +13,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            App(
+                baseUrl = "http:localhost:9999/"
+            )
         }
     }
 }

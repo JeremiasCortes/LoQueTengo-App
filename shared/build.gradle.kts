@@ -97,6 +97,14 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
+
+            // Corutinas
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.kotlinx.coroutines.core)
+
+            // Navegación
+            implementation(libs.navigation3.ui)
+            implementation(libs.androidx.lifecycle.viewmodel.navigation3)
         }
 
         commonTest.dependencies {

@@ -7,21 +7,10 @@
     <string name="login_password">Contraseña</string>
     <string name="login_submit">Entrar</string>
 
-    <string name="login_error_missing_credentials">
-        Introduce el correo y la contraseña.
-    </string>
-
-    <string name="login_error_rejected">
-        Las credenciales no son correctas.
-    </string>
-
-    <string name="login_error_invalid_response">
-        El servidor ha devuelto una respuesta inválida.
-    </string>
-
-    <string name="login_error_unexpected">
-        No se ha podido iniciar sesión. Inténtalo de nuevo.
-    </string>
+    <string name="login_error_missing_credentials">Introduce el correo y la contraseña.</string>
+    <string name="login_error_rejected">Las credenciales no son correctas.</string>
+    <string name="login_error_invalid_response">El servidor ha devuelto una respuesta inválida.</string>
+    <string name="login_error_unexpected">No se ha podido iniciar sesión. Inténtalo de nuevo.</string>
 
     <string name="main_placeholder">Sesión iniciada correctamente</string>
     <string name="logout">Cerrar sesión</string>
