@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             App(
-                baseUrl = "http:localhost:9999/"
+                baseUrl = "http://10.0.2.2:9999/"
             )
         }
     }

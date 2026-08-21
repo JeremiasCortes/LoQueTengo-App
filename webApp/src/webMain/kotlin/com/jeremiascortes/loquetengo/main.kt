@@ -6,6 +6,8 @@ import androidx.compose.ui.window.ComposeViewport
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     ComposeViewport {
-        App()
+        App(
+            baseUrl = "http://localhost:9999/"
+        )
     }
 }
