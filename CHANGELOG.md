@@ -7,7 +7,13 @@ y este proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.0.0] - Unreleased
+
+### Added
+- Login
+
 ## [0.0.0] - 2026-08-11
 
 ### Added
+
 - Inicialización de todo el proyecto y subida a GitHub

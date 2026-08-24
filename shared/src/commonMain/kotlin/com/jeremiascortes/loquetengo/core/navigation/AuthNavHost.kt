@@ -8,15 +8,10 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.savedstate.compose.serialization.serializers.SnapshotStateListSerializer
-import com.jeremiascortes.loquetengo.feature.auth.data.AuthRepository
-import com.jeremiascortes.loquetengo.feature.auth.domain.session.AuthSessionManager
 import com.jeremiascortes.loquetengo.feature.auth.presentation.login.LoginRoute
 
 @Composable
-internal fun AuthNavHost(
-    authRepository: AuthRepository,
-    sessionManager: AuthSessionManager,
-) {
+internal fun AuthNavHost() {
     val backStack = rememberSerializable(
         serializer = SnapshotStateListSerializer<AuthRoute>(),
     ) {
@@ -36,10 +31,7 @@ internal fun AuthNavHost(
         ),
         entryProvider = entryProvider {
             entry<AuthRoute.Login> {
-                LoginRoute(
-                    authRepository = authRepository,
-                    sessionManager = sessionManager,
-                )
+                LoginRoute()
             }
         },
     )

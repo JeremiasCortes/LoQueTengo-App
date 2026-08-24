@@ -97,6 +97,7 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
+            implementation(libs.ktor.client.auth)
 
             // Corutinas
             implementation(libs.androidx.lifecycle.viewmodel)
@@ -105,6 +106,12 @@ kotlin {
             // Navegación
             implementation(libs.navigation3.ui)
             implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+
+            // Inyección de dependencias
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
         }
 
         commonTest.dependencies {
