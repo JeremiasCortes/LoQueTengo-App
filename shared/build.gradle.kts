@@ -112,6 +112,9 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
+
+            // Persistencia multiplataforma de la sesión
+            implementation(libs.multiplatform.settings.no.arg)
         }
 
         commonTest.dependencies {

@@ -7,10 +7,11 @@ y este proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
-## [0.0.0] - Unreleased
+## [0.0.1] - Unreleased
 
 ### Added
 - Login
+- Persistencia de la autentificación del usuario
 
 ## [0.0.0] - 2026-08-11
 
