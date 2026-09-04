@@ -2,10 +2,16 @@
 <resources>
     <string name="app_name">Lo Que Tengo</string>
 
+    <!-- Autentificación -->
+    <string name="input_email">Correo electrónico</string>
+    <string name="input_password">Contraseña</string>
+    <string name="button_submit">Entrar</string>
+
+    <!-- Login -->
     <string name="login_title">Iniciar sesión</string>
-    <string name="login_email">Correo electrónico</string>
-    <string name="login_password">Contraseña</string>
-    <string name="login_submit">Entrar</string>
+
+    <!-- Register -->
+    <string name="register_title">Registrarse</string>
 
     <string name="login_error_missing_credentials">Introduce el correo y la contraseña.</string>
     <string name="login_error_rejected">Las credenciales no son correctas.</string>

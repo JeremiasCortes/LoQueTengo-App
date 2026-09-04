@@ -26,13 +26,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import loquetengo.shared.generated.resources.Res
-import loquetengo.shared.generated.resources.login_email
+import loquetengo.shared.generated.resources.input_email
 import loquetengo.shared.generated.resources.login_error_invalid_response
 import loquetengo.shared.generated.resources.login_error_missing_credentials
 import loquetengo.shared.generated.resources.login_error_rejected
 import loquetengo.shared.generated.resources.login_error_unexpected
-import loquetengo.shared.generated.resources.login_password
-import loquetengo.shared.generated.resources.login_submit
+import loquetengo.shared.generated.resources.input_password
+import loquetengo.shared.generated.resources.button_submit
 import loquetengo.shared.generated.resources.login_title
 import org.jetbrains.compose.resources.stringResource
 
@@ -70,7 +70,7 @@ internal fun LoginScreen(
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !state.isLoading,
                 label = {
-                    Text(stringResource(Res.string.login_email))
+                    Text(stringResource(Res.string.input_email))
                 },
                 keyboardOptions = KeyboardOptions(
                     keyboardType = KeyboardType.Email,
@@ -89,7 +89,7 @@ internal fun LoginScreen(
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !state.isLoading,
                 label = {
-                    Text(stringResource(Res.string.login_password))
+                    Text(stringResource(Res.string.input_password))
                 },
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(
@@ -131,7 +131,7 @@ internal fun LoginScreen(
                         strokeWidth = 2.dp,
                     )
                 } else {
-                    Text(stringResource(Res.string.login_submit))
+                    Text(stringResource(Res.string.button_submit))
                 }
             }
         }
