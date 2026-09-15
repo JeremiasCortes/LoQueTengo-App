@@ -10,8 +10,9 @@ y este proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 ## [0.0.1] - Unreleased
 
 ### Added
-- Login
+- Pantalla Login
 - Persistencia de la autentificación del usuario
+- Pantalla de registro
 
 ## [0.0.0] - 2026-08-11
 
