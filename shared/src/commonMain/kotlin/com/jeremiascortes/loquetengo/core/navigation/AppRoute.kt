@@ -8,6 +8,9 @@ internal sealed interface AuthRoute: NavKey {
 
     @Serializable
     data object Login: AuthRoute
+
+    @Serializable
+    data object Register: AuthRoute
 }
 
 @Serializable

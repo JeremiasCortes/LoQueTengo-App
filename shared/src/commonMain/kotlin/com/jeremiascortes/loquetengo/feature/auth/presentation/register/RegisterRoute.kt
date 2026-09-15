@@ -1,4 +1,4 @@
-package com.jeremiascortes.loquetengo.feature.auth.presentation.login
+package com.jeremiascortes.loquetengo.feature.auth.presentation.register
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -6,15 +6,16 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-internal fun LoginRoute(
-    viewModel: LoginViewModel = koinViewModel(),
-    onNavigateToRegister: () -> Unit
+internal fun RegisterRoute(
+    // TODO: Falta la implementación del viewmodel
+    viewModel: RegisterViewModel = koinViewModel(),
+    onNavigateToBack: () -> Unit
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
-    LoginScreen(
+    RegisterScreen(
         state = state,
         onAction = viewModel::onAction,
-        onRegisterClick = onNavigateToRegister
+        onNavigateToBack = onNavigateToBack
     )
 }

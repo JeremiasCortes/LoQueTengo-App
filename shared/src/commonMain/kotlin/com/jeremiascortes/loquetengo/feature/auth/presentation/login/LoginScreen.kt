@@ -26,27 +26,28 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import loquetengo.shared.generated.resources.Res
+import loquetengo.shared.generated.resources.button_submit
 import loquetengo.shared.generated.resources.input_email
+import loquetengo.shared.generated.resources.input_password
 import loquetengo.shared.generated.resources.login_error_invalid_response
 import loquetengo.shared.generated.resources.login_error_missing_credentials
 import loquetengo.shared.generated.resources.login_error_rejected
 import loquetengo.shared.generated.resources.login_error_unexpected
-import loquetengo.shared.generated.resources.input_password
-import loquetengo.shared.generated.resources.button_submit
 import loquetengo.shared.generated.resources.login_title
+import loquetengo.shared.generated.resources.register_subtitle
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
 internal fun LoginScreen(
     state: LoginUiState,
     onAction: (LoginAction) -> Unit,
-    modifier: Modifier = Modifier,
+    onRegisterClick: () -> Unit
 ) {
     Column(
-        modifier = modifier
+        modifier = Modifier
+            .padding(horizontal = 24.dp)
             .fillMaxSize()
-            .safeContentPadding()
-            .padding(horizontal = 24.dp),
+            .safeContentPadding(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
@@ -134,6 +135,15 @@ internal fun LoginScreen(
                     Text(stringResource(Res.string.button_submit))
                 }
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Button(
+                onClick = onRegisterClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(stringResource(Res.string.register_subtitle))
+            }
         }
     }
 }
@@ -164,6 +174,7 @@ private fun LoginScreenPreview() {
                 email = "usuario@example.com",
             ),
             onAction = {},
+            onRegisterClick = {},
         )
     }
 }

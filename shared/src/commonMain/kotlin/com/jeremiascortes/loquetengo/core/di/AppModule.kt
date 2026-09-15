@@ -7,6 +7,7 @@ import com.jeremiascortes.loquetengo.feature.auth.data.remote.AuthRemoteDataSour
 import com.jeremiascortes.loquetengo.feature.auth.domain.session.AuthSessionManager
 import com.jeremiascortes.loquetengo.feature.auth.domain.session.AuthSessionStorage
 import com.jeremiascortes.loquetengo.feature.auth.presentation.login.LoginViewModel
+import com.jeremiascortes.loquetengo.feature.auth.presentation.register.RegisterViewModel
 import io.ktor.client.HttpClient
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -58,4 +59,5 @@ internal fun createAppModule(
      * Koin respeta el ciclo de vida del ViewModel.
      */
     viewModelOf(::LoginViewModel)
+    viewModelOf(::RegisterViewModel)
 }

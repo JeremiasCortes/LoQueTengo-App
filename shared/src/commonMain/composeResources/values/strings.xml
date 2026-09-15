@@ -5,6 +5,7 @@
     <!-- Autentificación -->
     <string name="input_email">Correo electrónico</string>
     <string name="input_password">Contraseña</string>
+    <string name="input_password_repeat">Repite la contraseña</string>
     <string name="button_submit">Entrar</string>
 
     <!-- Login -->
@@ -12,6 +13,9 @@
 
     <!-- Register -->
     <string name="register_title">Registrarse</string>
+    <string name="register_subtitle">¿No tienes cuenta? Regístrate aquí</string>
+
+    <string name="register_back_to_login">¿Tienes cuenta? Inicia sesión</string>
 
     <string name="login_error_missing_credentials">Introduce el correo y la contraseña.</string>
     <string name="login_error_rejected">Las credenciales no son correctas.</string>

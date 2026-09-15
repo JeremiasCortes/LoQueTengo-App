@@ -9,6 +9,7 @@ import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.savedstate.compose.serialization.serializers.SnapshotStateListSerializer
 import com.jeremiascortes.loquetengo.feature.auth.presentation.login.LoginRoute
+import com.jeremiascortes.loquetengo.feature.auth.presentation.register.RegisterRoute
 
 @Composable
 internal fun AuthNavHost() {
@@ -30,9 +31,27 @@ internal fun AuthNavHost() {
             rememberViewModelStoreNavEntryDecorator(),
         ),
         entryProvider = entryProvider {
+
             entry<AuthRoute.Login> {
-                LoginRoute()
+                LoginRoute(
+                    onNavigateToRegister = {
+                        if (backStack.lastOrNull() != AuthRoute.Register) {
+                            backStack.add(AuthRoute.Register)
+                        }
+                    }
+                )
             }
+
+            entry<AuthRoute.Register> {
+                RegisterRoute(
+                    onNavigateToBack = {
+                        if (backStack.lastOrNull() != AuthRoute.Login) {
+                            backStack.add(AuthRoute.Login)
+                        }
+                    }
+                )
+            }
+
         },
     )
 }
