@@ -3,6 +3,8 @@ package com.jeremiascortes.loquetengo.feature.auth.data.remote
 import com.jeremiascortes.loquetengo.core.network.ApiResponseDto
 import com.jeremiascortes.loquetengo.feature.auth.data.remote.dto.LoginRequestDto
 import com.jeremiascortes.loquetengo.feature.auth.data.remote.dto.LoginSessionDto
+import com.jeremiascortes.loquetengo.feature.auth.data.remote.dto.RegisterRequestDto
+import com.jeremiascortes.loquetengo.feature.auth.data.remote.dto.RegisterSessionDto
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.post
@@ -23,7 +25,17 @@ internal class AuthRemoteDataSource(
         }.body()
     }
 
+    suspend fun register(
+        request: RegisterRequestDto,
+    ): ApiResponseDto<RegisterSessionDto> {
+        return httpClient.post(REGISTER_PATH) {
+            contentType(ContentType.Application.Json)
+            setBody(request)
+        }.body()
+    }
+
     private companion object {
         const val LOGIN_PATH = "api/v1/auth/login"
+        const val REGISTER_PATH = "api/v1/auth/register"
     }
 }

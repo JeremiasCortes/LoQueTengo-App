@@ -5,7 +5,7 @@ internal data class RegisterUiState(
     val password: String = "",
     val confirmPassword: String = "",
     val isLoading: Boolean = false,
-    val error: RegisterError? = null
+    val error: RegisterError? = null,
 ) {
     val canSubmit: Boolean
         get() = email.isNotBlank() &&

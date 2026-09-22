@@ -13,6 +13,7 @@ y este proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 - Pantalla Login
 - Persistencia de la autentificación del usuario
 - Pantalla de registro
+- Mensaje de éxito al crear una cuenta con opción de iniciar sesión
 
 ## [0.0.0] - 2026-08-11
 

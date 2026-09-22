@@ -53,9 +53,7 @@ internal class LoginViewModel(
     private fun submit() {
         val currentState = _state.value
 
-        if (currentState.isLoading) {
-            return
-        }
+        if (currentState.isLoading) return
 
         if (currentState.email.isBlank() || currentState.password.isBlank()) {
             _state.update { it.copy(error = LoginError.MissingCredentials) }

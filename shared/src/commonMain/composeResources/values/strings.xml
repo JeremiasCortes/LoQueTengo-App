@@ -17,6 +17,8 @@
 
     <string name="register_back_to_login">¿Tienes cuenta? Inicia sesión</string>
 
+    <string name="register_success_message">¡Registro exitoso!</string>
+
     <string name="login_error_missing_credentials">Introduce el correo y la contraseña.</string>
     <string name="login_error_rejected">Las credenciales no son correctas.</string>
     <string name="login_error_invalid_response">El servidor ha devuelto una respuesta inválida.</string>

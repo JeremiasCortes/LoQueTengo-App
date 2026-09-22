@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import loquetengo.shared.generated.resources.Res
@@ -57,7 +58,9 @@ internal fun LoginScreen(
                 .widthIn(max = 480.dp),
         ) {
             Text(
+                modifier = Modifier.fillMaxWidth(),
                 text = stringResource(Res.string.login_title),
+                textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.headlineMedium,
             )
 
